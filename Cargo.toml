@@ -6,8 +6,12 @@ authors = ["Developer"]
 description = "A secure, local-first, encrypted secret manager for developers"
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/sa001gar/kookie-cli"
+homepage = "https://github.com/sa001gar/kookie-cli"
+documentation = "https://github.com/sa001gar/kookie-cli#readme"
 keywords = ["secrets", "password-manager", "encryption", "cli", "security"]
 categories = ["command-line-utilities", "cryptography"]
+exclude = ["assets/*", ".github/*", "install.ps1", "install.sh"]
 
 [dependencies]
 # CLI parsing

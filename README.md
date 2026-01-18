@@ -1,15 +1,61 @@
-# Kookie
+<p align="center">
+  <img src="assets/logo.png" alt="Kookie Logo" width="200"/>
+</p>
 
-A secure, local-first, encrypted secret manager for developers.
+<h1 align="center">Kookie</h1>
+
+<p align="center">
+  <strong>A secure, local-first, encrypted secret manager for developers.</strong>
+</p>
+
+<p align="center">
+  <a href="#installation">Installation</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#commands">Commands</a> •
+  <a href="#security">Security</a> •
+  <a href="#architecture">Architecture</a>
+</p>
+
+---
+
+## Why "Kookie"?
+
+The name **Kookie** holds a special meaning. It's a word that reminds me of something irreplaceable in my life-something I never want to forget. Every time I hear it, it brings a sense of warmth and purpose. It's a word I never get tired of.
+
+Beyond the personal connection, "Kookie" is derived from **cookie**-just like how browsers store cookies to remember you, Kookie stores your secrets to protect you. But unlike browser cookies, your secrets never leave your machine unencrypted.
+
+---
+
+## What is Kookie?
+
+As a developer, you juggle countless secrets every day: API keys, database passwords, JWT secrets, OAuth tokens, SSH keys, and private notes. Over time, these get scattered across `.env` files, random text files, browser password managers, and that one sticky note you swore you'd throw away.
+
+**Kookie** solves this chaos.
+
+It's a **command-line vault** that lives on your machine. Everything is encrypted with military-grade cryptography. Your master password is the only key-it's never stored, never transmitted, never recoverable. If you forget it, your secrets are gone forever. That's not a bug; that's a feature.
+
+Kookie is designed for developers who want:
+
+- **One place** for all secrets
+- **Zero trust** in cloud services
+- **Full control** over their data
+- **Developer-friendly** CLI workflows
+
+---
 
 ## Features
 
-- **Strong Encryption**: AES-256-GCM with Argon2id key derivation
-- **Multiple Secret Types**: Passwords, API keys, notes, database credentials, tokens
-- **Session Management**: Configurable unlock timeout
-- **Developer Tools**: JWT secret generator, random key generator
-- **Clipboard Support**: Copy secrets directly to clipboard
-- **Cross-Platform**: Works on Windows, Linux, macOS
+| Feature                   | Description                                                      |
+| ------------------------- | ---------------------------------------------------------------- |
+| **Strong Encryption**     | AES-256-GCM with Argon2id key derivation                         |
+| **Multiple Secret Types** | Passwords, API keys, notes, database credentials, tokens         |
+| **Session Management**    | Configurable unlock timeout (don't re-enter password every time) |
+| **Developer Tools**       | JWT secret generator, random key generator, password generator   |
+| **Clipboard Support**     | Copy secrets directly to clipboard with one command              |
+| **Self-Installing**       | Run `kookie install` and it adds itself to PATH                  |
+| **Cross-Platform**        | Works on Windows, Linux, macOS, and even Termux                  |
+
+---
 
 ## Installation
 
@@ -36,8 +82,10 @@ cargo build --release
 ./target/release/kookie install
 ```
 
-**Windows:** Installs to `%LOCALAPPDATA%\kookie\` and updates user PATH  
-**Linux/macOS:** Installs to `~/.local/bin/` and updates shell config
+| Platform    | Install Location         | PATH Update                                       |
+| ----------- | ------------------------ | ------------------------------------------------- |
+| Windows     | `%LOCALAPPDATA%\kookie\` | Windows Registry                                  |
+| Linux/macOS | `~/.local/bin/`          | Shell config (`.bashrc`, `.zshrc`, `config.fish`) |
 
 ### Uninstall
 
@@ -45,10 +93,12 @@ cargo build --release
 kookie uninstall
 ```
 
+---
+
 ## Quick Start
 
 ```bash
-# Initialize your vault
+# Initialize your vault (creates encrypted storage)
 kookie init
 
 # Add a password
@@ -63,6 +113,8 @@ kookie get my-password-name
 # Copy to clipboard
 kookie get my-password-name --copy
 ```
+
+---
 
 ## Commands
 
@@ -131,17 +183,32 @@ kookie config --timeout 10   # Set unlock timeout to 10 minutes
 kookie config --timeout 0    # Disable session (always ask password)
 ```
 
+---
+
+## Architecture
+
+<p align="center">
+  <img src="assets/architecture.png" alt="Kookie Architecture" width="600"/>
+</p>
+
+Kookie is built with a modular architecture:
+
+- **CLI Interface**: Parses commands using `clap`
+- **Command Handler**: Routes to appropriate command modules
+- **Session Manager**: Handles unlock timeout and key caching
+- **Vault Manager**: Manages encrypted storage and CRUD operations
+- **Crypto Engine**: Provides encryption (AES-256-GCM) and key derivation (Argon2id)
+
+---
+
 ## Security
 
 ### Encryption
 
-- **Key Derivation**: Argon2id (memory-hard, GPU-resistant)
-  - 64 MB memory cost
-  - 3 iterations
-  - 4 parallelism
-- **Encryption**: AES-256-GCM (authenticated encryption)
-  - Random 96-bit nonce per encryption
-  - Ensures confidentiality and integrity
+| Component          | Algorithm   | Parameters                                |
+| ------------------ | ----------- | ----------------------------------------- |
+| **Key Derivation** | Argon2id    | 64 MB memory, 3 iterations, 4 parallelism |
+| **Encryption**     | AES-256-GCM | Random 96-bit nonce per encryption        |
 
 ### Storage
 
@@ -155,16 +222,22 @@ kookie config --timeout 0    # Disable session (always ask password)
 - Automatically expires after configured timeout
 - Can be manually cleared with `kookie lock`
 
+---
+
 ## Vault Location
 
-- **Windows**: `C:\Users\<username>\.kookie\`
-- **Linux/macOS**: `~/.kookie/`
+| Platform    | Location                       |
+| ----------- | ------------------------------ |
+| Windows     | `C:\Users\<username>\.kookie\` |
+| Linux/macOS | `~/.kookie/`                   |
 
-Files:
+**Files:**
 
 - `vault.json` - Encrypted vault data
 - `config.json` - Configuration settings
 - `.session` - Temporary session data (auto-expires)
+
+---
 
 ## Future Roadmap
 
@@ -173,6 +246,14 @@ Files:
 - [ ] Merge conflict resolution for multi-device sync
 - [ ] Team sharing with end-to-end encryption
 
+---
+
 ## License
 
 MIT License
+
+---
+
+<p align="center">
+  Made with purpose. Built with Rust.
+</p>
